@@ -5,15 +5,17 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 /**
- * @author Fedor S. Lavrentyev <a href="mailto:fediq@oorraa.net"/>
+ * @author Fedor S. Lavrentyev <a href="mailto:me@fediq.ru"/>
  * @since 06/10/14
  */
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan("ru.fizteh.java2.fediq.marketplace")
+@PropertySource(value = "file:marketplace.properties", ignoreResourceNotFound = true)
 public class AppConfig {
 
     @Bean

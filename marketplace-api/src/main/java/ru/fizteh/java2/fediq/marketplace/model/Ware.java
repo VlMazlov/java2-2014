@@ -1,35 +1,32 @@
 package ru.fizteh.java2.fediq.marketplace.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
- * @author Fedor S. Lavrentyev <a href="mailto:fediq@oorraa.net"/>
+ * @author Fedor S. Lavrentyev <a href="mailto:me@fediq.ru"/>
  * @since 06/10/14
  */
-public class Ware {
-    private String id;
-    private String name;
-    private String measuring;
+public class Ware extends WareDescription {
+    @JsonProperty("id")
+    private String identifier;
 
-    public String getId() {
-        return id;
+    @JsonIgnore
+    private String internalData;
+
+    public String getIdentifier() {
+        return identifier;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
     }
 
-    public String getName() {
-        return name;
+    public String getInternalData() {
+        return internalData;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMeasuring() {
-        return measuring;
-    }
-
-    public void setMeasuring(String measuring) {
-        this.measuring = measuring;
+    public void setInternalData(String internalData) {
+        this.internalData = internalData;
     }
 }
