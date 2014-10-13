@@ -5,15 +5,15 @@ package ru.fizteh.java2.fediq.marketplace.model;
  * @since 06/10/14
  */
 public class WareDescription {
-    private String ware;
+    private String name;
     private String measuring;
 
-    public String getWare() {
-        return ware;
+    public String getName() {
+        return name;
     }
 
-    public void setWare(String ware) {
-        this.ware = ware;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getMeasuring() {

@@ -5,12 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import ru.fizteh.java2.fediq.marketplace.api.WaresService;
+import ru.fizteh.java2.fediq.marketplace.exceptions.BadRequestException;
+import ru.fizteh.java2.fediq.marketplace.exceptions.NotFoundException;
 import ru.fizteh.java2.fediq.marketplace.model.Ware;
 import ru.fizteh.java2.fediq.marketplace.model.WareDescription;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.UUID;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -36,14 +37,7 @@ public class RestResourceController {
 
     @RequestMapping(value = "/", method = POST)
     public Ware createWare(@RequestBody WareDescription description) {
-        Ware ware = new Ware();
-        ware.setMeasuring(description.getMeasuring());
-        ware.setWare(description.getWare());
-
-        ware.setIdentifier(UUID.randomUUID().toString());
-
-        waresService.saveWare(ware);
-        return ware;
+        return waresService.createWare(description);
     }
 
     @RequestMapping(value = "/{id}", method = PUT)
@@ -93,7 +87,4 @@ public class RestResourceController {
         return "Exception " + ex + ":\n" + Throwables.getStackTraceAsString(ex);
     }
 
-    public static class BadRequestException extends RuntimeException { }
-
-    public static class NotFoundException extends RuntimeException { }
 }

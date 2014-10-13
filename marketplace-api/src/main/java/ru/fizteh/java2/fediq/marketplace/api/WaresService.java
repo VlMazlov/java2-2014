@@ -1,6 +1,7 @@
 package ru.fizteh.java2.fediq.marketplace.api;
 
 import ru.fizteh.java2.fediq.marketplace.model.Ware;
+import ru.fizteh.java2.fediq.marketplace.model.WareDescription;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
 public interface WaresService {
     Ware getWare(String id);
     void saveWare(Ware ware);
+    Ware createWare(WareDescription description);
     boolean deleteWare(String id);
     List<String> listWareIds();
 }
