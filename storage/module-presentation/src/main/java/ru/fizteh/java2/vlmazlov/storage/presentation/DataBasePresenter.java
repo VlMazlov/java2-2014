@@ -14,9 +14,6 @@ import ru.fizteh.java2.vlmazlov.storage.utils.ValidityCheckFailedException;
 
 import java.io.IOException;
 
-/**
- * Created by vlmazlov on 14.10.14.
- */
 @Service
 @Lazy
 public class DataBasePresenter<V, T extends GenericTable<V>> {

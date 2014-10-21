@@ -1,11 +1,9 @@
-2014-10-14 19:50:30 INFO  2.vlmazlov.storage.shell.Shell - Shell has started
-2014-10-14 19:50:30 INFO  2.vlmazlov.storage.shell.Shell - Starting state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: null
-2014-10-14 19:50:37 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: null
-2014-10-14 19:50:37 INFO  2.vlmazlov.storage.shell.Shell - Executing command use 
-2014-10-14 19:50:42 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: StoreableTable[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1/table1]
-2014-10-14 19:50:42 INFO  2.vlmazlov.storage.shell.Shell - Executing command size 
-2014-10-14 19:50:44 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: StoreableTable[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1/table1]
-2014-10-14 19:50:44 INFO  2.vlmazlov.storage.shell.Shell - Executing command get 
-2014-10-14 19:50:46 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: StoreableTable[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1/table1]
-2014-10-14 19:50:48 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: StoreableTable[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1/table1]
-2014-10-14 19:50:48 INFO  2.vlmazlov.storage.shell.Shell - Executing command exit 
+2014-10-22 01:18:08 INFO  lmazlov.storage.main.AppConfig - Starting AppConfig on vlmazlov-Large with PID 14571 (/home/vlmazlov/Documents/Prog/JAVA/fizteh-java2-2014/storage/module-main/target/classes started by vlmazlov in /home/vlmazlov/Documents/Prog/JAVA/fizteh-java2-2014/storage)
+2014-10-22 01:18:08 DEBUG lmazlov.storage.main.AppConfig - Running with Spring Boot v1.1.8.RELEASE, Spring v4.1.0.RELEASE
+2014-10-22 01:18:09 INFO  lmazlov.storage.main.AppConfig - Started AppConfig in 0.835 seconds (JVM running for 1.14)
+2014-10-22 01:18:09 INFO  2.vlmazlov.storage.shell.Shell - Shell has started
+2014-10-22 01:18:09 INFO  2.vlmazlov.storage.shell.Shell - Starting state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/wasted], active table: null
+2014-10-22 01:18:15 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/wasted], active table: null
+2014-10-22 01:18:15 INFO  2.vlmazlov.storage.shell.Shell - Executing command size 
+2014-10-22 01:18:18 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/wasted], active table: null
+2014-10-22 01:18:18 INFO  2.vlmazlov.storage.shell.Shell - Executing command exit 

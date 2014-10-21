@@ -2,7 +2,6 @@ package ru.fizteh.java2.vlmazlov.storage.shell;
 
 import java.util.*;
 import com.google.common.base.Joiner;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -14,7 +13,6 @@ import ru.fizteh.java2.vlmazlov.storage.shell.commands.api.UserInterruptionExcep
 import ru.fizteh.java2.vlmazlov.storage.shell.commands.api.WrongCommandException;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 @Controller
 @Lazy
@@ -22,7 +20,7 @@ import javax.annotation.PreDestroy;
 
 public class Shell<T extends ShellState> {
 
-    private static final Logger logger = LoggerFactory.getLogger(Shell.class);
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(Shell.class);
     private static final String INVITATION = "$ ";
 
     private final Map<String, Command<T>> supportedCommands;

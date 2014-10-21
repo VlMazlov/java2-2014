@@ -24,13 +24,20 @@
         <processorPath useClasspath="true" />
         <module name="module-api" />
         <module name="module-core" />
-        <module name="module-implementation" />
         <module name="module-main" />
         <module name="module-presentation" />
         <module name="module-shell" />
         <module name="module-utils" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="module-api" target="1.8" />
+      <module name="module-core" target="1.8" />
+      <module name="module-main" target="1.8" />
+      <module name="module-shell" target="1.8" />
+      <module name="module-utils" target="1.8" />
+      <module name="storage" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
