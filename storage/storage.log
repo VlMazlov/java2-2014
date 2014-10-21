@@ -1,0 +1,11 @@
+2014-10-14 19:50:30 INFO  2.vlmazlov.storage.shell.Shell - Shell has started
+2014-10-14 19:50:30 INFO  2.vlmazlov.storage.shell.Shell - Starting state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: null
+2014-10-14 19:50:37 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: null
+2014-10-14 19:50:37 INFO  2.vlmazlov.storage.shell.Shell - Executing command use 
+2014-10-14 19:50:42 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: StoreableTable[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1/table1]
+2014-10-14 19:50:42 INFO  2.vlmazlov.storage.shell.Shell - Executing command size 
+2014-10-14 19:50:44 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: StoreableTable[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1/table1]
+2014-10-14 19:50:44 INFO  2.vlmazlov.storage.shell.Shell - Executing command get 
+2014-10-14 19:50:46 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: StoreableTable[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1/table1]
+2014-10-14 19:50:48 TRACE 2.vlmazlov.storage.shell.Shell - Current state: provider: StoreableTableProvider[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1], active table: StoreableTable[/home/vlmazlov/Documents/Prog/JAVA/backup/wasted1/table1]
+2014-10-14 19:50:48 INFO  2.vlmazlov.storage.shell.Shell - Executing command exit 

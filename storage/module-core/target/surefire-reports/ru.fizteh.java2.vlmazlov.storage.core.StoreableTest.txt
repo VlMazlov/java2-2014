@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ru.fizteh.java2.vlmazlov.storage.core.StoreableTest
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
