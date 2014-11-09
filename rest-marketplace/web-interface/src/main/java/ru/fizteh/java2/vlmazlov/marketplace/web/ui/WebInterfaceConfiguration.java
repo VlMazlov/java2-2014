@@ -6,20 +6,11 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.spring4.resourceresolver.SpringResourceResourceResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
-import ru.fizteh.java2.vlmazlov.marketplace.api.GenericManager;
-import ru.fizteh.java2.vlmazlov.marketplace.model.Trader;
-import ru.fizteh.java2.vlmazlov.marketplace.model.TraderDescription;
-import ru.fizteh.java2.vlmazlov.marketplace.model.Ware;
-import ru.fizteh.java2.vlmazlov.marketplace.model.WareDescription;
-import ru.fizteh.java2.vlmazlov.marketplace.web.ui.view.GenericMarketPageView;
-import ru.fizteh.java2.vlmazlov.marketplace.web.urlmanager.URLManager;
 
 /**
  * Created by vlmazlov on 07.11.14.

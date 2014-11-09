@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ru.fizteh.java2.vlmazlov.marketplace.web.urlmanager.URLManager;
 
-import javax.annotation.Resource;
-
 /**
  * Created by vlmazlov on 07.11.14.
  */
@@ -16,12 +14,13 @@ import javax.annotation.Resource;
 public class IndexPageView
 {
     @Autowired
+    private
     URLManager urlManager;
 
-    public static final String INDEX_VIEW_NAME = "index";
+    private static final String INDEX_VIEW_NAME = "index";
 
-    public static final String HOST_VIEW_ATTR="host";
-    public static final String PORT_VIEW_ATTR="port";
+    private static final String HOST_VIEW_ATTR="host";
+    private static final String PORT_VIEW_ATTR="port";
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView handleIndexPage()

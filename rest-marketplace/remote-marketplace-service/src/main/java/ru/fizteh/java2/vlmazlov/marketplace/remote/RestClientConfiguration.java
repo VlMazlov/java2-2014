@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
-import ru.fizteh.java2.vlmazlov.marketplace.web.urlmanager.URLManager;
 
 /**
  * Created by vlmazlov on 03.11.14.

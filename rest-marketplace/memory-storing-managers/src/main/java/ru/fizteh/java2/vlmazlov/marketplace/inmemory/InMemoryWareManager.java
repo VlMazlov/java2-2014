@@ -1,7 +1,6 @@
 package ru.fizteh.java2.vlmazlov.marketplace.inmemory;
 
 import org.springframework.stereotype.Service;
-import ru.fizteh.java2.vlmazlov.marketplace.api.GenericManager;
 import ru.fizteh.java2.vlmazlov.marketplace.model.Ware;
 import ru.fizteh.java2.vlmazlov.marketplace.model.WareDescription;
 

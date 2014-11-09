@@ -1,16 +1,11 @@
 package ru.fizteh.java2.vlmazlov.marketplace.web.ui.view;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
-import ru.fizteh.java2.vlmazlov.marketplace.api.GenericManager;
 import ru.fizteh.java2.vlmazlov.marketplace.model.Ware;
 import ru.fizteh.java2.vlmazlov.marketplace.model.WareDescription;
-
-import javax.annotation.PostConstruct;
 
 /**
  * Created by vlmazlov on 09.11.14.

@@ -14,7 +14,6 @@ import ru.fizteh.java2.vlmazlov.marketplace.api.ManageableEntry;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static java.lang.Math.ceil;
 import static java.lang.Math.min;
 
 /**
@@ -33,7 +32,7 @@ public class GenericMarketPageView<T, V extends ManageableEntry>
     private int FIRST_SHOWN_PAGE = 0;
     private static final int MAX_SHOWN_PAGES = 5;
     private static final int MAX_PAGE_SIZE = 5;
-    
+
     @Autowired
     private GenericManager<T, V> manager;
 

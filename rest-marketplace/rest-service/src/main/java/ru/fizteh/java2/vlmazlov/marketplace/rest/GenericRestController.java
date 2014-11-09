@@ -11,7 +11,6 @@ import ru.fizteh.java2.vlmazlov.marketplace.execptions.ForbiddenException;
 import ru.fizteh.java2.vlmazlov.marketplace.execptions.NotFoundException;
 
 import javax.servlet.http.HttpServletRequest;
-import java.awt.*;
 import java.util.List;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
@@ -89,27 +88,26 @@ public class GenericRestController<T, V extends ManageableEntry>
     @ExceptionHandler(BadRequestException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
-    String handleBadRequest(HttpServletRequest req, BadRequestException ex) {
-        return "400 BAD REQUEST";
+    String handleBadRequest(BadRequestException ex) {
+        return "400 BAD REQUEST" + ex.getMessage();
     }
 
     @ExceptionHandler(NotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ResponseBody String handleNotFound(HttpServletRequest req, NotFoundException ex) {
-        return "404 NOT FOUND";
+    @ResponseBody String handleNotFound(NotFoundException ex) {
+        return "404 NOT FOUND" + ex.getMessage();
     }
 
     @ExceptionHandler(ForbiddenException.class)
     @ResponseStatus(HttpStatus.FORBIDDEN)
-    @ResponseBody String handleForbidden(HttpServletRequest req, NotFoundException ex) {
-        return "403 FORBIDDEN";
+    @ResponseBody String handleForbidden(ForbiddenException ex) {
+        return "403 FORBIDDEN" + ex.getMessage();
     }
 
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ResponseBody String handleException(HttpServletRequest req, Exception ex)
+    @ResponseBody String handleException(Exception ex)
     {
-        //System.out.println("CRASH: " + ex.getMessage());
         return "Exception " + ex + ":\n" + Throwables.getStackTraceAsString(ex);
     }
 }

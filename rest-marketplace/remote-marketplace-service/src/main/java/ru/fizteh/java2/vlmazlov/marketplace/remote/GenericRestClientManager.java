@@ -1,7 +1,6 @@
 package ru.fizteh.java2.vlmazlov.marketplace.remote;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import ru.fizteh.java2.vlmazlov.marketplace.api.GenericManager;
 import ru.fizteh.java2.vlmazlov.marketplace.api.ManageableEntry;

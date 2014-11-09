@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public abstract class GenericInMemoryManager<T, V extends ManageableEntry> implements GenericManager<T, V>
 {
-    private Map<String, V> entriesMap = new ConcurrentHashMap<>();
+    private final Map<String, V> entriesMap = new ConcurrentHashMap<>();
 
     @Override
     public V get(String id)
@@ -61,5 +61,5 @@ public abstract class GenericInMemoryManager<T, V extends ManageableEntry> imple
         return RandomStringUtils.randomAlphanumeric(6);
     }
 
-    public abstract V constructByDescriptionAndId(T description, String id);
+    protected abstract V constructByDescriptionAndId(T description, String id);
 }

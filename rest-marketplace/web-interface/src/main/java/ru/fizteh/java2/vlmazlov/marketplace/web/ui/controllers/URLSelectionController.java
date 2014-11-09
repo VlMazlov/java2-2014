@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.fizteh.java2.vlmazlov.marketplace.web.urlmanager.URLManager;
 
-import javax.annotation.Resource;
-
 /**
  * Created by vlmazlov on 07.11.14.
  */
@@ -16,6 +14,7 @@ import javax.annotation.Resource;
 public class URLSelectionController
 {
     @Autowired
+    private
     URLManager urlManager;
 
     @RequestMapping(value = "/setHost", method = RequestMethod.POST)
