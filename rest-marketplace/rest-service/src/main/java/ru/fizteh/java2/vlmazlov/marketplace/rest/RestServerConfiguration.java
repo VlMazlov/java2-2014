@@ -6,6 +6,7 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import ru.fizteh.java2.vlmazlov.marketplace.model.Trader;
 import ru.fizteh.java2.vlmazlov.marketplace.model.TraderDescription;
 import ru.fizteh.java2.vlmazlov.marketplace.model.Ware;
@@ -17,7 +18,7 @@ import ru.fizteh.java2.vlmazlov.marketplace.model.WareDescription;
 @Configuration
 public class RestServerConfiguration
 {
-    @Value("${ru.fizteh.java2.vlmazlov.marketplace.rest.port:1500}")
+    @Value("${ru.fizteh.java2.vlmazlov.marketplace.rest.port:8080}")
     private int port;
 
     @Bean
@@ -26,19 +27,5 @@ public class RestServerConfiguration
         TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
         factory.setPort(port);
         return factory;
-    }
-
-    @Bean
-    @RequestMapping(value = "/wares")
-    public GenericRestController<WareDescription, Ware> wareRestController()
-    {
-        return new GenericRestController<>();
-    }
-
-    @Bean
-    @RequestMapping(value = "/traders")
-    public GenericRestController<TraderDescription, Trader> traderRestController()
-    {
-        return new GenericRestController<>();
     }
 }

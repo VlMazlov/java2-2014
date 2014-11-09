@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Traders management page</title>
+
+    <!--link rel="stylesheet" type="text/css" href="../css/style.css"-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css" />
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css" />
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div class="header">
+    <h1>Available traders:</h1>
+</div>
+
+<div class="content">
+    <table class="pure-table pure-table-horizontal">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="trader, iterStat : ${tradersList}">
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${trader.identifier}"></td>
+            <td th:text="${trader.name}"></td>
+            <td th:text="${trader.country}"></td>
+            <td>
+                <form method="post" action="/traders/delete" th:object="${trader}" class="pure-form">
+                    <input type="hidden" th:value="*{identifier}" name="id" />
+                    <input type="submit" value="Delete" class="pure-button " />
+                </form>
+            </td>
+        </tr>
+
+        <form class="pure-form" action="/traders/add" method="post">
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td><input type="text" name="name" /></td>
+                <td><input type="text" name="country" /></td>
+
+                <td><input class="pure-button pure-button-primary" type="submit" value="Create" /></td>
+
+            </tr>
+        </form>
+        </tbody>
+    </table>
+
+    <ul class="pure-paginator paginator">
+        <li>
+            <form action="/traders/left_shift_pages_list" method="get">
+                <input type="hidden" name="firstShownPageNum" th:text="${firstShownPage}" />
+                <input type="submit" class="pure-button prev" value="&#171;" />
+            </form>
+        </li>
+
+        <li th:each="page: ${visiblePagesList}">
+
+            <form action="/traders" method="get">
+                <input type="hidden" name="pageNum" th:value="${page}" />
+
+                <div th:switch="${page}">
+                    <input th:case="${activePage}"
+                           type="submit" class="pure-button pure-button-active" th:value="${page}" />
+
+                    <input th:case="*" type="submit" class="pure-button" th:value="${page}" />
+                </div>
+
+            </form>
+        </li>
+
+        <li>
+            <form action="/traders/right_shift_pages_list" method="get">
+                <input type="hidden" name="firstShownPageNum" th:text="${firstShownPage}" />
+                <input type="submit" class="pure-button next" value="&#187;" />
+            </form>
+        </li>
+    </ul>
+
+    <a href="/" class="content-subhead">Return to main page</a>
+
+</div>
+
+
+</body>
+</html>

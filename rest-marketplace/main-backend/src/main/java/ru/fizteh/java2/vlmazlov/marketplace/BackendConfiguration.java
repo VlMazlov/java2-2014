@@ -1,5 +1,6 @@
 package ru.fizteh.java2.vlmazlov.marketplace;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +19,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 public class BackendConfiguration
 {
     @Bean
-    public PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
+    public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
 

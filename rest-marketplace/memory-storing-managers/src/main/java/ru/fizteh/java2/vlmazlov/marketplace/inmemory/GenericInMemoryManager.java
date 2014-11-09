@@ -38,7 +38,10 @@ public abstract class GenericInMemoryManager<T, V extends ManageableEntry> imple
             id = generateId();
         } while (entriesMap.containsKey(id));
 
-        return constructByDescriptionAndId(description, id);
+        V created = constructByDescriptionAndId(description, id);
+
+        save(created);
+        return created;
     }
 
     @Override

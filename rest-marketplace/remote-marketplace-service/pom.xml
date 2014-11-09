@@ -26,6 +26,12 @@
             <version>${project.parent.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>ru.fizteh.java2.vlmazlov</groupId>
+            <artifactId>url-manager</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>

@@ -6,13 +6,17 @@ package ru.fizteh.java2.vlmazlov.marketplace.model;
 public class WareDescription
 {
 
-    private final String name;
-    private final String measuring;
+    private String name;
+    private String measuring;
 
-    protected WareDescription(String name, String measuring)
+    public WareDescription(String name, String measuring)
     {
         this.name = name;
         this.measuring = measuring;
+    }
+
+    public WareDescription()
+    {
     }
 
     public String getName()
@@ -23,5 +27,15 @@ public class WareDescription
     public String getMeasuring()
     {
         return measuring;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setMeasuring(String measuring)
+    {
+        this.measuring = measuring;
     }
 }

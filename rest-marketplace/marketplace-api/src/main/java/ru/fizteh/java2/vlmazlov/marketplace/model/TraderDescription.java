@@ -6,14 +6,18 @@ package ru.fizteh.java2.vlmazlov.marketplace.model;
 public class TraderDescription
 {
 
-    private final String name;
+    private String name;
     //needs fixing?
-    private final String country;
+    private String country;
 
-    protected TraderDescription(String name, String country)
+    public TraderDescription(String name, String country)
     {
         this.name = name;
         this.country = country;
+    }
+
+    public TraderDescription()
+    {
     }
 
     public String getName()
@@ -24,5 +28,15 @@ public class TraderDescription
     public String getCountry()
     {
         return country;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setCountry(String country)
+    {
+        this.country = country;
     }
 }

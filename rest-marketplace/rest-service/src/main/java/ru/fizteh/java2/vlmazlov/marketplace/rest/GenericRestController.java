@@ -11,6 +11,7 @@ import ru.fizteh.java2.vlmazlov.marketplace.execptions.ForbiddenException;
 import ru.fizteh.java2.vlmazlov.marketplace.execptions.NotFoundException;
 
 import javax.servlet.http.HttpServletRequest;
+import java.awt.*;
 import java.util.List;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
@@ -18,20 +19,20 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 /**
  * Created by vlmazlov on 03.11.14.
  */
-@RestController
+
 public class GenericRestController<T, V extends ManageableEntry>
 {
     @Autowired
     private GenericManager<T, V> manager;
 
     @RequestMapping(value = "/", method = GET)
-    public List<String> list()
+    protected List<String> list()
     {
         return manager.list();
     }
 
     @RequestMapping(value = "/{id}", method = GET)
-    public V get(@PathVariable(value = "id") String id)
+    protected V get(@PathVariable(value = "id") String id)
             throws NotFoundException
     {
         if (id == null) {
@@ -47,7 +48,7 @@ public class GenericRestController<T, V extends ManageableEntry>
     }
 
     @RequestMapping(value = "/{id}", method = PUT)
-    public void save(@PathVariable(value = "id") String id, @RequestBody V entry)
+    protected void save(@PathVariable(value = "id") String id, @RequestBody V entry)
             throws BadRequestException
     {
 
@@ -63,7 +64,7 @@ public class GenericRestController<T, V extends ManageableEntry>
     }
 
     @RequestMapping(value = "/{id}", method = DELETE)
-    public void delete(@PathVariable(value = "id") String id)
+    protected void delete(@PathVariable(value = "id") String id)
             throws NotFoundException
     {
         if (id == null) {
@@ -76,7 +77,7 @@ public class GenericRestController<T, V extends ManageableEntry>
     }
 
     @RequestMapping(value = "/", method = POST)
-    public V create(@RequestBody T description)
+    protected V create(@RequestBody T description)
     {
         if (description == null) {
             throw new IllegalStateException("Unable to create: no description provided");
@@ -87,7 +88,8 @@ public class GenericRestController<T, V extends ManageableEntry>
 
     @ExceptionHandler(BadRequestException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ResponseBody String handleBadRequest(HttpServletRequest req, BadRequestException ex) {
+    @ResponseBody
+    String handleBadRequest(HttpServletRequest req, BadRequestException ex) {
         return "400 BAD REQUEST";
     }
 
@@ -107,6 +109,7 @@ public class GenericRestController<T, V extends ManageableEntry>
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody String handleException(HttpServletRequest req, Exception ex)
     {
+        //System.out.println("CRASH: " + ex.getMessage());
         return "Exception " + ex + ":\n" + Throwables.getStackTraceAsString(ex);
     }
 }

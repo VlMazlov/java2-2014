@@ -9,7 +9,7 @@ import ru.fizteh.java2.vlmazlov.marketplace.api.ManageableEntry;
 public class Ware extends WareDescription implements ManageableEntry
 {
     @JsonProperty("id")
-    private final String identifier;
+    private String identifier;
 
     public Ware(WareDescription wareDescription, String identifier)
     {
@@ -17,9 +17,18 @@ public class Ware extends WareDescription implements ManageableEntry
         this.identifier = identifier;
     }
 
+    public Ware()
+    {
+    }
+
     public String getIdentifier()
     {
         return identifier;
+    }
+
+    public void setIdentifier(String identifier)
+    {
+        this.identifier = identifier;
     }
 
 }

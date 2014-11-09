@@ -12,4 +12,39 @@
     <artifactId>web-interface</artifactId>
     <version>${project.parent.version}</version>
 
+    <dependencies>
+
+        <dependency>
+            <!-- Spring Boot Starter содержит Spring MVC, Embedded Tomcat и, собственно, сам Spring Boot -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${boot-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring4</artifactId>
+            <version>2.1.3.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>17.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.fizteh.java2.vlmazlov</groupId>
+            <artifactId>marketplace-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.fizteh.java2.vlmazlov</groupId>
+            <artifactId>url-manager</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+    </dependencies>
+
 </project>

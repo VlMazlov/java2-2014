@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
  * Created by vlmazlov on 03.11.14.
@@ -16,13 +18,15 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableAutoConfiguration
 @EnableWebMvc
 @ComponentScan("ru.fizteh.java2.vlmazlov.marketplace")
-@PropertySource(value = "file:marketplace.properties", ignoreResourceNotFound = true)
+@PropertySource(value = "file:marketplace.properties", ignoreResourceNotFound = false)
 public class FrontendConfiguration
 {
     @Bean
-    public PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
+    public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
+
+
 
     public static void main(String[] args)
     {

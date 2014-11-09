@@ -17,6 +17,7 @@
         <module>main-backend</module>
         <module>main-frontend</module>
         <module>web-interface</module>
+        <module>url-manager</module>
 
     </modules>
 

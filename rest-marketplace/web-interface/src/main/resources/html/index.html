@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Marketplace main page</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css" />
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css" />
+    <!--<![endif]-->
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome to our market!</h1>
+    </div>
+
+    <div class="content">
+        <h2 class="content-subhead">Please select the host and port of your marketplace:</h2>
+        </div>
+
+        <div>
+        <form method="post" action="/setPost" class="pure-form pure-form-aligned host-port-form">
+                <div class="pure-control-group">
+                    <label for="host">Host</label>
+                    <input id="host" name = "host" type="text" th:placeholder="${host}" />
+                    <input type="submit" value="Change" class="pure-button pure-button-primary" />
+                </div>
+
+        </form>
+
+        <form method="post" action="/setPort" class="pure-form pure-form-aligned host-port-form">
+
+            <div class="pure-control-group">
+                <label for="port">Port</label>
+                <input id="port" name="port" type="number" th:placeholder="${port}" />
+                <input type="submit" value="Change" class="pure-button pure-button-primary" />
+            </div>
+        </form>
+    </div>
+
+    <a class="pure-button pure-button-active wares-button" href="/wares">
+        Inspect wares
+    </a>
+
+    <a class="pure-button pure-button-active" href="/traders">
+        Inspect traders
+    </a>
+
+    <!-- FIXME AUTHENTICATION -->
+</body>
+</html>
