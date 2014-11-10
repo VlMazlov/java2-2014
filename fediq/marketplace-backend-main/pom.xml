@@ -20,7 +20,7 @@
         </dependency>
         <dependency>
             <groupId>ru.fizteh.java2.fediq</groupId>
-            <artifactId>inmemory-wares-service</artifactId>
+            <artifactId>orm-wares-service</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

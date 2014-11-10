@@ -16,6 +16,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @EnableAutoConfiguration
 @ComponentScan("ru.fizteh.java2.fediq.marketplace")
 @PropertySource(value = "file:marketplace.properties", ignoreResourceNotFound = true)
+@PropertySource(value = "file:marketplace-local.properties", ignoreResourceNotFound = true)
 public class BackendConfig {
 
     @Bean

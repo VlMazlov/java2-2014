@@ -23,6 +23,7 @@
         <module>marketplace-api</module>
 
         <module>inmemory-wares-service</module>
+        <module>orm-wares-service</module>
         <module>rest-service</module>
         <module>marketplace-backend-main</module>
 

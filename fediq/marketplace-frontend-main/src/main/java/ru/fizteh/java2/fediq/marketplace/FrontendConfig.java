@@ -18,6 +18,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 @ComponentScan("ru.fizteh.java2.fediq.marketplace")
 @PropertySource(value = "file:marketplace.properties", ignoreResourceNotFound = true)
+@PropertySource(value = "file:marketplace-local.properties", ignoreResourceNotFound = true)
 public class FrontendConfig {
 
     @Bean
