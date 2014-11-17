@@ -123,6 +123,12 @@ public class GenericMarketPageView<T, V extends ManageableEntry>
             ++pagesNum;
         }
 
+        //there is always at least 1 page
+
+        if (knownIds.size() == 0) {
+            pagesNum = 1;
+        }
+
         return pagesNum;
     }
 

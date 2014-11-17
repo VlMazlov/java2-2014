@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:f="">
+<head>
+    <title>Marketplace management page</title>
+</head>
+<body>
+    <h1>Welcome to marketplace!</h1>
+    <table>
+        <tr>
+            <th>Ware ID</th>
+            <th>Name</th>
+            <th>Measuring</th>
+            <th></th>
+        </tr>
+
+        <tr th:each="ware : ${waresList}">
+            <td th:text="${ware.identifier}"></td>
+            <td th:text="${ware.name}"></td>
+            <td th:text="${ware.measuring}"></td>
+            <td>
+                <form method="post" action="/del" th:object="${ware}">
+                    <input type="hidden" th:value="*{identifier}" name="id"/>
+                    <input type="submit" value="Delete" />
+                </form>
+            </td>
+        </tr>
+
+        <form action="/add" method="post">
+            <tr>
+
+                <td></td>
+                <td><input type="text" name="name"/></td>
+                <td><input type="text" name="measuring"/></td>
+
+                <td><input type="submit" value="Create" /></td>
+
+            </tr>
+        </form>
+        <!-- FIXME PAGINATION -->
+    </table>
+</body>
+</html>

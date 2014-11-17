@@ -247,3 +247,12 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .wares-button {
     margin-left: 43.3%;
 }
+
+.register-form {
+    margin-top: 5%;
+    margin-right: 20%;
+}
+
+.error-message {
+    color: red;
+}

@@ -5,3 +5,7 @@ tmp/
 
 *.jar
 *.class
+<<<<<<< HEAD
+=======
+*-local.properties
+>>>>>>> 5d99bb774d81f419c18a8e36d80eab9ac6750ab0
